@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Order summary card</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+    body {
+      background-image: url("images/pattern-background-desktop.svg");
+      background-repeat: repeat-x;
+      background-color: hsl(225, 100%, 94%);
+    }
+
+    button {
+      margin-top: 15px;
+      border: none;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 16px;
+      display: block;
+      background-color: white;
+      color: hsl(224, 23%, 55%);
+      width: 300px;
+      height: 43px;
+      border-radius: 7px;
+      font-family: "Red Hat Display", sans-serif;
+      transition: 1s;
+    }
+
+    button#active {
+      background-color: hsl(245, 75%, 52%);
+      color: white;
+    }
+    button#active:hover{
+      background-color: hsl(224, 23%, 55%);
+    }
+    button:hover{
+      color:hsl(223, 47%, 23%);
+    }
+
+    body,
+    html {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #container {
+      background-color: #ffffff;
+      box-shadow: #1f1f1f 10px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      border-radius: 10px;
+      font-family: "Red Hat Display", sans-serif;
+      color: #142141;
+      transition: 1s;
+    }
+
+    #location {
+      color: #c4df54;
+      font-size: 14px;
+      font-family: interbold, sans-serif;
+    }
+
+    #title {
+      font-family: "Red Hat Display", sans-serif;
+      font-size: 25px;
+      font-weight: 900;
+      margin-bottom: 15px;
+    }
+
+    #desc {
+      font-family: "Red Hat Display", sans-serif;
+      color: hsl(224, 23%, 55%);
+      font-weight: 500;
+      font-size: 16px;
+      margin-bottom: 15px;
+
+    }
+
+    img {
+      border-radius: 100%;
+      margin-bottom: 15px;
+    }
+
+    #top {
+      display: flex;
+      height: 210px;
+      width: 450px;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      background-image: url(images/illustration-hero.svg);
+    }
+
+    #main {
+      padding: 50px 50px;
+    }
+
+    #cost {
+      background-color: hsl(225, 100%, 98%);
+      border-radius: 10px;
+      display: flex;
+    }
+    #planName{
+      font-family: "Red Hat Display", sans-serif;
+      font-weight: 900;
+      font-size: 16px;
+      color: hsl(223, 47%, 23%);
+      display: block;
+      margin-top: 19px;
+    }
+    #planContainer{
+      display: block;
+    }
+    #planChange{
+      margin-left: 45px;
+      margin-top: 35px;
+      color: hsl(245, 75%, 52%);
+      font-weight: 700;
+    }
+    #planCost{
+      margin-top: 5px;
+      color: hsl(224, 23%, 55%);
+      font-weight: 500;
+    }
+    #icon {
+      margin-top: 20px;
+      margin: 20px 20px 0px;
+    }
+    a{
+      transition: all 1s;
+    }
+    a:hover{
+      text-decoration: none;
+      color: hsl(224, 23%, 55%);
+    }
+
+    @media only screen and (max-width: 1440px) {
+      button {
+        width: 275px;
+        float: center;
+      }
+      #top{
+        width: 375px;
+      }
+      #container {
+        width: 375px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <div id="top">
+    </div>
+    <div id="main">
+      <div id="title">Order Summary</div>
+      <div id="desc">You can now listen to millions of songs,<br> audiobooks, and podcasts on any
+        device<br> anywhere you like!</div>
+      <div id="cost">
+        <div id="icon">
+          <img src="images/icon-music.svg">
+        </div>
+        <div id="planContainer">
+          <div id="planName">
+          Annual Plan
+        </div>
+        <div id="planCost">
+          $59.99/year
+        </div>
+      </div>
+      <div id="planChange">
+        <a href="">Change</a>
+      </div>
+      </div>
+      <button id="active">Proceed to Payment</button>
+      <button>Cancel Order</button>
+    </div>
+  </div>
+</body>
+
+</html>
